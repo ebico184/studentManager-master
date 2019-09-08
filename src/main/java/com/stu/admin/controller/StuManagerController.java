@@ -17,13 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by chenkexuan on 2017/4/27.
- */
 
-/**
- * edited and modified by dengxionghui on 2018/6/21
- */
 
 @Controller
 @RequestMapping(value = "/stu/stuManager" ,method = {RequestMethod.POST,RequestMethod.GET})

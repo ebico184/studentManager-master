@@ -33,15 +33,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <lebel for="password" class="col-md-3 control-label">身份：</lebel>
-                        <div class="col-md-8">
-                            <%--<label class="radio-inline">--%>
-                                <%--<input type="radio" name="role" value="student" checked> 学生--%>
-                            <%--</label>--%>
-                            <%--<label class="radio-inline">--%>
-                                <%--<input type="radio" name="role" value="manager"> 管理员--%>
-                            <%--</label>--%>
-                        </div>
+                        <%--<lebel for="password" class="col-md-3 control-label">身份：</lebel>--%>
+                        <%--<div class="col-md-8">--%>
+                            <%--&lt;%&ndash;<label class="radio-inline">&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<input type="radio" name="role" value="student" checked> 学生&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<label class="radio-inline">&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<input type="radio" name="role" value="manager"> 管理员&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
+                        <%--</div>--%>
                     </div>
                     <div class="form-group" style="margin-top: 30px;">
                         <div class="col-md-offset-5">

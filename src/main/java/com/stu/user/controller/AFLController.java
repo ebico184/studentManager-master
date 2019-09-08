@@ -14,9 +14,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * edited and modified by dengxionghui on 2018/6/21
- */
 
 @Controller
 @RequestMapping(value = "/stu/askforleave",method = {RequestMethod.POST,RequestMethod.GET})

@@ -16,9 +16,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * edited and modified by dengxionghui on 2018/6/21
- */
 
 @Controller
 @RequestMapping(value = "/stu/dormitory",method = {RequestMethod.POST,RequestMethod.GET})

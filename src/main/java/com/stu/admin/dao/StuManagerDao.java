@@ -5,13 +5,6 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-/**
- * Created by chenkexuan on 2017/4/27.
- */
-
-/**
- * edited and modified by dengxionghui on 2018/6/21
- */
 
 @Component
 public interface StuManagerDao {

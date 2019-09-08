@@ -14,13 +14,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by chenkexuan on 2017/4/27.
- */
 
-/**
- * edited and modified by dengxionghui on 2018/6/21
- */
 @Controller
 @RequestMapping(value = "/stu/user",method = {RequestMethod.POST,RequestMethod.GET})
 public class UserController {

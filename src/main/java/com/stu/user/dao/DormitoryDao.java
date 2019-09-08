@@ -5,13 +5,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by chenkexuan on 2017/4/27.
- */
 
-/**
- * edited and modified by dengxionghui on 2018/6/21
- */
 @Component
 public interface DormitoryDao {
 

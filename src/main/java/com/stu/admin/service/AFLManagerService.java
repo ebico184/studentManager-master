@@ -11,13 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by chenkexuan on 2017/4/27.
- */
 
-/**
- * edited and modified by dengxionghui on 2018/6/21
- */
 @Service
 @Transactional
 public class AFLManagerService {
@@ -39,7 +33,7 @@ public class AFLManagerService {
         }
         int begin = (page-1)*rows;
         int total = aflManagerDao.getTotalAFL(keywords);
-        data = aflManagerDao.getAllStuAFL(keywords,begin,rows);
+        data = aflManagerDao. getAllStuAFL(keywords,begin,rows);
         result.put("total",total);
         result.put("rows",data);
         return result;

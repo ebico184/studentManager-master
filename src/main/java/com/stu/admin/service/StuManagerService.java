@@ -11,13 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.stu.admin.dao.StuManagerDao;
 
-/**
- * Created by chenkexuan on 2017/4/27.
- */
 
-/**
- * edited and modified by dengxionghui on 2018/6/21
- */
 @Service
 @Transactional
 public class StuManagerService {
