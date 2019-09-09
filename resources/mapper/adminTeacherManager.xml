@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stu.admin.dao.TeaManagerDao">
+    <select id="getCountTeacher" parameterType="string" resultType="int">
+        SELECT count(*) FROM teacher
+        WHERE t_name LIKE concat(concat('%',#{0}),'%') OR
+			  gender LIKE concat(concat('%',#{0}),'%') OR
+			  phone_number LIKE concat(concat('%',#{0}),'%') OR
+			  professional_title LIKE concat(concat('%',#{0}),'%') OR
+			  address LIKE concat(concat('%',#{0}),'%')
+    </select>
+
+    <select id="getAllTeacher" parameterType="string" resultType="map">
+        select * from teacher
+		where t_name like concat(concat('%',#{0}),'%') or
+			  gender like concat(concat('%',#{0}),'%') or
+			  phone_number like concat(concat('%',#{0}),'%') or
+			  professional_title like concat(concat('%',#{0}),'%') or
+			  address like concat(concat('%',#{0}),'%')
+		order by id desc
+		limit #{1} ,#{2}
+    </select>
+
+    <insert id="addTeacher" parameterType="string">
+        INSERT into teacher(t_name,gender,phone_number,address,professional_title) values(#{0},#{1},#{2},#{3},#{4})
+    </insert>
+
+    <delete id="delTeacher" parameterType="int">
+        DELETE FROM teacher WHERE id=#{0}
+    </delete>
+
+    <delete id="delMoreTeacher" parameterType="list">
+        DELETE from teacher where id in
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <select id="getTeacher" parameterType="int" resultType="map">
+        SELECT * FROM teacher WHERE id=#{0}
+    </select>
+
+    <update id="updateTeacher" parameterType="string">
+        update teacher set t_name=#{0},gender=#{1},phone_number=#{2},address=#{3},professional_title=#{4}
+        where id=#{5}
+    </update>
+
+</mapper>
