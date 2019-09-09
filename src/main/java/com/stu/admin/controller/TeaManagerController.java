@@ -1,9 +1,7 @@
 package com.stu.admin.controller;
 
-import com.stu.admin.dao.TeaManagerDao;
 import com.stu.admin.service.TeaManagerService;
 import com.stu.util.ResponseUtil;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,8 +49,8 @@ public class TeaManagerController {
      * @param response
      * @throws IOException
      */
-    @RequestMapping(value = "adddTeacher.do", method = {RequestMethod.POST,RequestMethod.GET})
-    public void  addTeacher(String addT_name, String addGender, String addPhone_number, String addAddress, String addProfessioanl_title, HttpServletRequest request, HttpServletResponse response)throws IOException
+    @RequestMapping(value = "/addTeacher.do", method = {RequestMethod.POST,RequestMethod.GET})
+    public void addTeacher(String addT_name, String addGender, String addPhone_number, String addAddress, String addProfessioanl_title, HttpServletRequest request, HttpServletResponse response)throws IOException
     {
         Map<String, Object> data = new HashMap<String, Object>();
         data = teaManagerService.addTeacher(addT_name, addGender, addPhone_number, addAddress, addProfessioanl_title);
@@ -68,7 +66,7 @@ public class TeaManagerController {
      * @throws IOException
      */
     @RequestMapping(value = "/delTeacher.do", method ={RequestMethod.POST, RequestMethod.GET})
-    public  void delTeacher(String id, HttpServletResponse response, HttpServletRequest request)throws IOException
+    public void delTeacher(String id, HttpServletResponse response, HttpServletRequest request)throws IOException
     {
         Map<String, Object> data = new HashMap<String, Object>();
         data = teaManagerService.delStudent(id);
