@@ -47,7 +47,7 @@
                         <div class="col-md-offset-5">
                             <button class="btn btn-primary" id="login">登陆</button>
                             <button class="btn btn-default" id="reset">重置</button>
-                            <button class="btn btn-warning" id="signup">注册</button>
+                            <%--<button class="btn btn-warning" id="signup">注册</button>--%>
                         </div>
                     </div>
                 </div>

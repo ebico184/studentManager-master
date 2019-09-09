@@ -78,20 +78,20 @@ var initClick = function(){
             changeSwitchState(state);
         }
     });
-    //设置switch状态
-    var changeSwitchState = function(state){
-        $.ajax({
-            url:"/stu/stuManager/setSwitch.do",
-            type:"POST",
-            data:{
-                name:"courseSwitch",
-                state:state
-            },
-            success:function (result) {
-                //DONOTING
-            }
-        });
-    };
+    // //设置switch状态
+    // var changeSwitchState = function(state){
+    //     $.ajax({
+    //         url:"/stu/stuManager/setSwitch.do",
+    //         type:"POST",
+    //         data:{
+    //             name:"courseSwitch",
+    //             state:state
+    //         },
+    //         success:function (result) {
+    //             //DONOTING
+    //         }
+    //     });
+    // };
     //显示全部点击事件
     $("#showAll-btn").click(function(){
         $("#content").datagrid("load",{keyword:""});

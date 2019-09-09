@@ -75,7 +75,7 @@ public class TeaManagerController {
         ResponseUtil.returnJson(data, response);
     }
 
-    @RequestMapping(value = "/delMoreTeacher", method = {RequestMethod.POST, RequestMethod.GET})
+    @RequestMapping(value = "/delMoreTeacher.do", method = {RequestMethod.POST, RequestMethod.GET})
     public void delMoreTeacher(String[] ids,HttpServletRequest request, HttpServletResponse response)throws IOException
     {
         Map<String, Object> data = new HashMap<String, Object>();

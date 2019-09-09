@@ -41,8 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				  <ul class="dropdown-menu">
                       <li><a href="index.jsp">学生信息管理</a></li>
                       <li><a href="adminCourseManager.jsp">课程信息管理</a></li>
-                      <li><a href="adminAFLManager.jsp">请假信息管理</a></li>
-                      <li><a href="adminDormiManager.jsp">住宿信息管理</a></li>
+
                       <li role="separator" class="divider"></li>
                       <li><a href="/stu/user/adminLogout.do">退出系统</a></li>
                       <li><a href="adminChangePassword.jsp">修改密码</a></li>
@@ -57,8 +56,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<ul class="nav nav-pills nav-stacked">
 			    <li role="presentation"><a href="index.jsp">学生信息管理</a></li>
 			    <li role="presentation" class="active"><a href="adminCourseManager.jsp">课程信息管理</a></li>
-                <li role="presentation"><a href="adminAFLManager.jsp">请假信息管理</a></li>
-                <li role="presentation"><a href="adminDormiManager.jsp">住宿信息管理</a></li>
+
 			</ul>
 	   </div>
 	   <div class="col-md-10">
