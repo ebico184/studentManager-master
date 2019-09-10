@@ -47,12 +47,6 @@ public class TeaManagerService {
      */
     public Map<String,Object> addTeacher(String addT_name, String addGender, String addPhone_number, String addAddress, String addProfessioanl_title) {
         Map<String,Object> result = new HashMap<String,Object>();
-        if(addT_name == null){
-            result.put("code",false);
-            result.put("msg","教师姓名不能为空!");
-            return result;
-        }
-
         teaManagerDao.addTeacher(addT_name,addGender,addPhone_number,addAddress,addProfessioanl_title);
 
         result.put("code",true);
@@ -103,7 +97,7 @@ public class TeaManagerService {
      * @param updateAddress
      * @param updateProfessioanl_title
      */
-    public Map<String,Object> updateTeacher(String updateT_name, String updateGender, String updatePhone_number, String updateAddress, String updateProfessioanl_title){
+    public Map<String,Object> updateTeacher(String updateT_name, String updateGender, String updatePhone_number, String updateAddress, String updateProfessioanl_title, String updateId){
         Map<String, Object> result = new HashMap<String, Object>();
 
         if(updateT_name == null){
@@ -125,7 +119,7 @@ public class TeaManagerService {
         if(updateProfessioanl_title == null){
             updateProfessioanl_title = "";
         }
-        teaManagerDao.updateTeacher(updateT_name, updateGender,updatePhone_number, updateAddress, updateProfessioanl_title);
+        teaManagerDao.updateTeacher(updateT_name, updateGender,updatePhone_number, updateAddress, updateProfessioanl_title, updateId);
         result.put("code", true);
         result.put("msg", "修改成功");
         return result;

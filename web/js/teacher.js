@@ -163,39 +163,26 @@ var initClick = function(){
             type:"POST",
             data:{
                 addT_name:name,
-                addProfessioanl_title:professionalTitle,
                 addGender:sex,
                 addPhone_number:phone,
-                addAddress:address
+                addAddress:address,
+                addProfessioanl_title:professionalTitle
             },
 
-            success:function(data){
-            	if(data.code){
-					$.messager.confirm("提示",data.msg,function(r){
+            success:function(){
+					$.messager.confirm("提示","添加成功!",function(r){
 						if(r){
                             $("#dd").dialog('close');
-                            var name = $("#add-name").val("");
-                            var professionalTitle = $("#add-professionalTitle").val("");
-                            $("#add-radio1").attr("checked","checked");
-                            var phone = $("#add-phone").val("");
-                            var address = $("#add-address").val("");
                             $("#content").datagrid("load");
 						}else{
                             $("#dd").dialog('close');
                             $("#content").datagrid("load");
 						}
-					});
-                }else{
-                    $.messager.confirm("提示",data.msg,function(r){
-                        if(r){
-                        	//DO NOTING
-                        }
-                    });
-				}
+                });
             },
-            error:function(e){
+            error:function(){
                 $.messager.alert({
-                    title:"提示",
+                    title:"提示消息",
                     icon:"error",
                     msg:"添加失败！"
                 });
@@ -295,12 +282,12 @@ var initClick = function(){
             url:"/stu/teaManager/updateTeacher.do",
             type:"POST",
             data:{
-                id:id,
-                name:name,
-                professionalTitle:professionalTitle,
-                sex:sex,
-                phone:phone,
-                address:address
+                updateId:id,
+                updateT_name:name,
+                updateGender:sex,
+                updatePhone_number:phone,
+                updateAddress:address,
+                updateProfessioanl_title:professionalTitle
             },
             success:function(data){
                 if(data.code){
@@ -351,10 +338,10 @@ var showUpdateBox = function(id){
 		success:function(data){
 			if(data.code){
 				$("#update-hiddenID").val(data.data.id);
-                $("#update-name").val(data.data.name);
-                $("#update-professionalTitle").val(data.data.professionalTitle);
-				$(":radio[name='updateSex'][value='" + data.data.sex + "']").prop("checked", "checked");
-                $("#update-phone").val(data.data.phone);
+                $("#update-name").val(data.data.t_name);
+                $("#update-professionalTitle").val(data.data.professional_title);
+				$(":radio[name='updateSex'][value='" + data.data.gender + "']").prop("checked", "checked");
+                $("#update-phone").val(data.data.phone_number);
                 $("#update-address").val(data.data.address);
                 $("#updateBox").dialog({
                     title:"修改信息",

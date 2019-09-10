@@ -138,11 +138,11 @@ var initClick = function(){
                 });
             },
             error:function(){
-                $.messager.alert({
-                    title:"提示消息",
-                    icon:"error",
-                    msg:"添加失败！"
-                });
+                    $.messager.alert({
+                        title:"提示消息",
+                        icon:"error",
+                        msg:"添加失败！"
+                    });
             }
         });
     });

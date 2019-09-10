@@ -92,7 +92,9 @@ public class TeaManagerController {
     public void getTeacher(String id, HttpServletResponse response, HttpServletRequest request)throws IOException
     {
         Map<String, Object>data = new HashMap<String, Object>();
+
         data = teaManagerService.getTeacher(id);
+        System.out.println("165156:"+data.values());
         ResponseUtil.returnJson(data, response);
     }
 
@@ -108,10 +110,10 @@ public class TeaManagerController {
      * @throws IOException
      */
     @RequestMapping(value ="/updateTeacher.do" , method = {RequestMethod.POST, RequestMethod.GET})
-    public void updateTeacher(String updateT_name, String updateGender, String updatePhone_number, String updateAddress, String updateProfessioanl_title,HttpServletRequest request ,HttpServletResponse response)throws IOException
+    public void updateTeacher(String updateId, String updateT_name, String updateGender, String updatePhone_number, String updateAddress, String updateProfessioanl_title,HttpServletRequest request ,HttpServletResponse response)throws IOException
     {
         Map<String, Object> data = new HashMap<String, Object>();
-        data = teaManagerService.updateTeacher( updateT_name,  updateGender,  updatePhone_number, updateAddress, updateProfessioanl_title);
+        data = teaManagerService.updateTeacher(updateT_name,  updateGender,  updatePhone_number, updateAddress, updateProfessioanl_title, updateId);
         ResponseUtil.returnJson(data, response);
     }
 
